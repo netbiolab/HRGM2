@@ -15,20 +15,22 @@ This repository contains code used for HRGM2 construction.
 >   assembles quality-controlled reads as contigs using metaSPAdes
 > * **megahit.py**
 >   assembles quality-controlled reads as contigs using megahit
+> * **hifiasm_meta.py**
+>   assembles HiFi reads as contigs using hifiasm-meta
 
 ### 03.BeforeBinning
 > * **pre_binning.py**
 >   is a wrapper that can run the following codes at once
-> * **build_contig_index.py**
->   builds an index to align with contig
-> * **align_read_to_contig.py**
->   aligns reads to contig
-> * **SAMtoBAM.py**
->   converts SAM to BAM 
-> * **sortingBAMfile.py**
->   sorts BAM
-> * **indexingBAMfile.py**
->   indexes sorted BAM
+> > * **build_contig_index.py**
+> > builds an index to align with contig
+> > * **align_read_to_contig.py**
+> > aligns reads to contig
+> > * **SAMtoBAM.py**
+> > converts SAM to BAM 
+> > * **sortingBAMfile.py**
+> > sorts BAM
+> > * **indexingBAMfile.py**
+> > indexes sorted BAM
 
 ### 04.Binning
 ### 05.Dereplication
