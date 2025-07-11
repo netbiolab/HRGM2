@@ -33,6 +33,31 @@ This repository contains code used for HRGM2 construction.
 > > indexes sorted BAM
 
 ### 04.Binning
+> * **binning_pipeline.py**
+>   is a wrapper that can run pipelines of MetaBAT2, MaxBin2.0, and CONCOCT at once
+> > * **metaBAT2_pipeline.py**
+> > is a sub-wrapper that can run codes for binning using MetaBAT2
+> > > * **depth_file.py**
+> > > generates a depth file from sorted BAM
+> > > * **metaBAT2.py**
+> > > runs MetaBAT2 for binning from the depth file and contigs
+> > * **maxbin2_pipeline.py**
+> > is a sub-wrapper that can run codes for binning using MaxBin2.0
+> > > * **contig_abundance.py**
+> > > generates a contig abundance file from MetaBAT2 depth file
+> > > * **maxbin2.py**
+> > * **concoct_pipeline.py**
+> > is a sub-wrapper that can run codes for binning using CONCOCT
+> > > * **cut_contig.py**
+> > > * **coverage_table.py**
+> > > * **concoct.py**
+> > > * **merge_subcontig_clustering.py**
+> > > * **extract_bin.py**
+> > > * **megahit_bin_change_header.py**
+> * **metaWRAP.py**
+> combines the binning results from the three tools into a more robust bin set using the bin refinement module of MetaWRAP
+> * **gunc_run_sample.py**
+> identifies genome chimerism using GUNC
 ### 05.Dereplication
 ### 06.GenomeAnnotation
 ### 07.Pangenome
