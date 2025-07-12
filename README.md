@@ -14,7 +14,7 @@ This repository contains code used for HRGM2 construction.
 > * **metaSPAdes.py**
 >   assembles quality-controlled reads as contigs using metaSPAdes
 > * **megahit.py**
->   assembles quality-controlled reads as contigs using megahit
+>   assembles quality-controlled reads as contigs using MEGAHIT
 > * **hifiasm_meta.py**
 >   assembles HiFi reads as contigs using hifiasm-meta
 
@@ -46,20 +46,45 @@ This repository contains code used for HRGM2 construction.
 > > > * **contig_abundance.py**
 > > > generates a contig abundance file from MetaBAT2 depth file
 > > > * **maxbin2.py**
+> > > runs MaxBin2.0 for binning from the contig abundance file and contigs
 > > * **concoct_pipeline.py**
 > > is a sub-wrapper that can run codes for binning using CONCOCT
 > > > * **cut_contig.py**
+> > > cuts contigs into smaller parts
 > > > * **coverage_table.py**
+> > > generates table with coverage depth information per sample and subcontig
 > > > * **concoct.py**
+> > > runs CONCOCT for binning from the coverage table and contigs
 > > > * **merge_subcontig_clustering.py**
+> > > merges subcontig clustering into original contig clustering
 > > > * **extract_bin.py**
+> > > extracts bins as individual FASTA
 > > > * **megahit_bin_change_header.py**
+> > > unifies the contig header format of CONCOCT with other binning tools when using MEGAHIT as an assembler
 > * **metaWRAP.py**
 > combines the binning results from the three tools into a more robust bin set using the bin refinement module of MetaWRAP
 > * **gunc_run_sample.py**
 > identifies genome chimerism using GUNC
+
 ### 05.Dereplication
+> * **self_sketch_mash.py**
+> calculates the Mash distance between genomes belonging to the same order
+> * **mash2cluster_0.1.py**
+> performs average-linkage-based hierarchical clustering with a 0.1 cutoff to establish preliminary clusters
+> * **animf.py**
+> calculates average nucleotide identity (ANI) for each pair of genomes within each preliminary cluster
+> * **ani_results_to_distance_dict.py**
+> applies coverage threshold and saves ANI results into a distance dictionary
+> * **secondary_clustering.py**
+> conducts average-linkage-based hierarchical clustering with an ANI threshold of 95% to cluster genomes at the species level
+> * **ani_results_to_distance_dict_cov0.81.py**
+> is identical to ani_results_to_distance_dict.py, except that it uses a coverage threshold of 0.81 to remove duplicate genomes
+> * **non_redundant_clustering_sample_derep_ver2.py**
+> performs average-linkage-based hierarchical clustering within each species cluster to eliminate duplicate genomes
+
 ### 06.GenomeAnnotation
+> * ****
+
 ### 07.Pangenome
 ### 08.Marker
 ### 09.Benchmark
