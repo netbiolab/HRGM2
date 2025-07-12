@@ -72,7 +72,7 @@ This repository contains code used for HRGM2 construction.
 > * **mash2cluster_0.1.py**
 > performs average-linkage-based hierarchical clustering with a 0.1 cutoff to establish preliminary clusters
 > * **animf.py**
-> calculates average nucleotide identity (ANI) for each pair of genomes within each preliminary cluster
+> calculates average nucleotide identity (ANI) and coverage for each pair of genomes within each preliminary cluster
 > * **ani_results_to_distance_dict.py**
 > applies coverage threshold and saves ANI results into a distance dictionary
 > * **secondary_clustering.py**
@@ -83,9 +83,69 @@ This repository contains code used for HRGM2 construction.
 > performs average-linkage-based hierarchical clustering within each species cluster to eliminate duplicate genomes
 
 ### 06.GenomeAnnotation
-> * ****
+> * **gtdbtk_dataset.py**
+> runs GTDB-Tk classify_wf to assign GTDB taxonomic annotation to genomes
+> * **make_all_run_prokka.py**
+> makes a shell script to run Prokka for 230,632 redundant genomes of HRGM2
+> * **make_all_run_barrnap.py**
+> makes a shell script to run Barrnap for 230,632 redundant genomes of HRGM2
+> * **summarize_rRNA.py**
+> counts the number of rRNA from Barrnap results
+> * **make_all_run_tRNAscanSE.py**
+> makes a shell script to run tRNAscan-SE for 230,632 redundant genomes of HRGM2
+> * **summarize_tRNA.py**
+> counts the number of tRNA from tRNAscan-SE results
 
 ### 07.Pangenome
+> * **make_panaroo_inputs.py**
+> makes input lists to run Panaroo
+> * **run_panaroo.py**
+> runs Panaroo to construct pan-genomes
+> * **make_pangenome_faa.py**
+> obtains faa sequences corresponding to pan-genome references
+> * **run_eggnog_mapper.py**
+> runs eggNOG-mapper for pan-genomes to annotate functions
+> * **run_eggnog_mapper_cds_mode.py**
+> is identical to run_eggnog_mapper.py, except that it uses fna file of pan-genome and "--itype CDS" option
+> * **run_rgi.py**
+> runs RGI for pan-genomes to predict antibiotic resistance genes 
+
 ### 08.Marker
+> * ****
+> * ****
+> * ****
+> * ****
+> * ****
+> * ****
+> * ****
+> * ****
+> * ****
+> * ****
+> * ****
+> * ****
+> * ****
+> * ****
+
 ### 09.Benchmark
+> * ****
+> * ****
+> * ****
+> * ****
+> * ****
+> * ****
+> * ****
+> * ****
+
 ### 10.ProteinCatalog
+> * **prokka_CDS_parsing.py**
+> obtains protein sequences from Prokka results
+> * **cluster_identical_proteins.py**
+> clusters identical proteins together
+> * **extract_unique_proteins.py**
+> extracts protein sequences from the above clusters
+> * **make_cluster_info_file.py**
+> makes metadata containing cluster member information for the HRGM2 protein family
+> * **update_cluster_info_file.py**
+> adds a ‘the number of member proteins’ column to cluster_info.tsv
+> * **make_taxonomic_map.py**
+> makes metadata containing taxonomy information for the HRGM2 protein family
