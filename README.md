@@ -127,14 +127,22 @@ This repository contains code used for HRGM2 construction.
 > * ****
 
 ### 09.Benchmark
-> * ****
-> * ****
-> * ****
-> * ****
-> * ****
-> * ****
-> * ****
-> * ****
+> * **camisim_simulation.py**
+> generates simulated samples to compare taxonomic profiling methods
+> * **run_classification.py**
+> runs various taxonomic profiling methods for simulated samples
+> * **computational_resource.py**
+> summarizes the elapsed time and maximum RAM for each taxonomic profiling method
+> * **summary_classification_evaluation_metrics.py**
+> compares predicted results with the answer and calculates precision, recall, and F1 score
+> * **merge_metrics_summary.py**
+> merges the metric results per sample into one
+> * **normalization_size.py**
+> summarizes the species sizes for use in length normalization
+> * **summary_bray_curtis_similarity.py**
+> calculates Bray-Curtis similarity between the predicted profile and the real profile
+> * **merge_similarity_summary.py**
+> merges the similarity results per sample into one
 
 ### 10.ProteinCatalog
 > * **prokka_CDS_parsing.py**
