@@ -111,20 +111,32 @@ This repository contains code used for HRGM2 construction.
 > runs RGI for pan-genomes to predict antibiotic resistance genes 
 
 ### 08.Marker
-> * ****
-> * ****
-> * ****
-> * ****
-> * ****
-> * ****
-> * ****
-> * ****
-> * ****
-> * ****
-> * ****
-> * ****
-> * ****
-> * ****
+> * **panaroo_graph_to_node.py**
+> obtains nucleotide sequences and amino acid sequences of the pan-genome from the final graph
+> * **size_1_node_summary.py**
+> is for the same purpose as panaroo_graph_to_node.py, specifically for singleton species
+> * **remove_redundancy.py**
+> clusters identical proteins together
+> * **length_filtering.py**
+> extracts protein families with lengths between 150 and 1,500 amino acids
+> * **paralog_filtering.py**
+> extracts protein families with, on average, less than 1.5 copies per genome
+> * **coreness.py**
+> computes coreness in a particular species of protein families
+> * **coreness_filtering.py**
+> performs filtering based on a threshold determined by the size of the species cluster
+> * **calc_uniqueness.py**
+> calculates the number of species that share a particular protein family
+> * **core_uniqueness_filtering.py**
+> identifies unique core protein families for each species
+> * **make_candidate_reads.py**
+> fragments the DNA sequences of the marker candidates into 150 bp segments
+> * **make_align_coreness.py**
+> calculates coreness based on alignment
+> * **find_markers_ver3.py**
+> finds species-specific markers based alignment coreness
+> * **final_marker_filtering.py**
+> selects the top 200 markers, based on uniqueness and length, per species 
 
 ### 09.Benchmark
 > * **camisim_simulation.py**
