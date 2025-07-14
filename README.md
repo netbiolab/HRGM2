@@ -169,3 +169,29 @@ This repository contains code used for HRGM2 construction.
 > adds a ‘the number of member proteins’ column to cluster_info.tsv
 > * **make_taxonomic_map.py**
 > makes metadata containing taxonomy information for the HRGM2 protein family
+
+### 11.GEMs
+> * **run_carveme.py**
+> runs CarveMe to reconstruct genome-scale metabolic models
+> * **search_GEM_info.py**
+> calculates the number of metabolites/reactions/gene-associated reactions for GEMs
+> * **run_smetana.py**
+> runs SMETANA to predict pairwise metabolic interactions for species
+> * **calc_comp_pair_prop_taxonomy_rank.py**
+> calculates the proportion of cooperative and competitive pairs within the same and across different taxonomic clades
+> * **cooperative_order_of_lmi_clades.py**
+> calculates cooperative pair proportion between LMI order and other orders
+> * **calc_metabolite_dontation_to_LMI.py**
+> calculates the association between metabolite supply and the cooperative behavior of species toward LMI orders
+> * **community_wise_smetana.py**
+> runs SMETANA to get MIP and MRO scores for a disease-associated species community and random communities
+> * **species_pair_smetana_score.py**
+> calculates the SMETANA score for species pairs within the CD-associated species community
+> * **essential_metabolites_from_main_donors.py**
+> investigates key metabolites delivered to the receiver species by the two main donors of CD-associated species community
+> * **compare_donor_high_low_group.py**
+> investigates the relative abundances of receiver species and the abundance group of donor species in the CD samples
+> * **summarize_crc_nutritional_requirement_sets.py**
+> investigates metabolites commonly required by CRC-associated species from the nutritional requirement set of SMETANA
+> * **CRC_dominance_search.py**
+> investigates the dominance of species within CRC samples
