@@ -1,5 +1,5 @@
-# HRGM2 Code
-This repository contains code used for HRGM2 construction.
+# HRGM2 Code & Data
+This repository contains code used for HRGM2 construction and HRGM2 data.
 
 ## Code description
 ### 01.QualityControl
