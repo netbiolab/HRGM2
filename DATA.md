@@ -92,9 +92,43 @@ To reconstruct, ```cat HRGMv2_Pangenomes.part_* > HRGM2_Pangenomes.tar.gz```
 ---
 ## Kraken2_Rep_DB
 ### Description
-- Custom taxonomy database compatible with Kraken2 and Bracken. 
+- Custom taxonomy database compatible with Kraken2 and Bracken
+- Database built using a single representative sequence per species
+- (Usage) kraken2 commands with ```--db HRGMv2_Rep (downloaded database folder)```
 ### Zenodo DOI
-<>
+<https://doi.org/10.5281/zenodo.19492246>
+
+---
+## Kraken2_Concat_DB
+### Description
+- Custom taxonomy database compatible with Kraken2 and Bracken
+- Database built using concatenated sequences per species
+- (Usage) kraken2 commands with ```--db HRGMv2_Concat (downloaded database folder)```
+### Zenodo DOI
+This dataset has been split. 
+- Part 1: <https://doi.org/10.5281/zenodo.19508916>
+- Part 2: <https://doi.org/10.5281/zenodo.19508925>
+
+To reconstruct, ```cat HRGMv2_Kraken2_Concat_DB.part_* > HRGM2_Kraken2_Concat_DB.tar.gz```
+
+---
+## Nonredundant genomes
+### Description
+- Final set of 155,211 dereplicated genomes used to define HRGMv2 species
+### Zenodo DOI
+This dataset has been split. 
+- Part 1: <https://doi.org/10.5281/zenodo.19496139>
+- Part 2: <https://doi.org/10.5281/zenodo.19499800>
+- Part 3: <https://doi.org/10.5281/zenodo.19501013>
+
+To reconstruct, ```cat Nonredundant_genomes.part_* > HRGM2_Nonredundant_genomes.tar.gz```
+
+
+
+
+
+
+
 
 
 ---
