@@ -195,3 +195,5 @@ This repository contains code used for HRGM2 construction and HRGM2 data.
 > investigates metabolites commonly required by CRC-associated species from the nutritional requirement set of SMETANA
 > * **CRC_dominance_search.py**
 > investigates the dominance of species within CRC samples
+
+## Data description in DATA.md
