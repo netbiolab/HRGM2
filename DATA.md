@@ -123,17 +123,58 @@ This dataset has been split.
 
 To reconstruct, ```cat Nonredundant_genomes.part_* > HRGM2_Nonredundant_genomes.tar.gz```
 
+---
+## Redundant genomes
+### Description
+- Genome sequences of 230,632 input genomes (prior to dereplication)
+### Zenodo DOI
+This dataset has been split. 
+- Part 1: <https://doi.org/10.5281/zenodo.19501855>
+- Part 2: <https://doi.org/10.5281/zenodo.19502700>
+- Part 3: <https://doi.org/10.5281/zenodo.19503297>
+- Part 4: <https://doi.org/10.5281/zenodo.19504199>
+- Part 5: <https://doi.org/10.5281/zenodo.19505035>
 
-
-
-
-
-
-
+To reconstruct, ```cat Redundant_genomes.part_* > HRGM2_Redundant_genomes.tar.gz```
 
 ---
-## 
+## Proteins
 ### Description
-- 
+1.HRGMv2_Unique_Proteins/ : Unique protein sequences after redundancy removal
+- HRGMv2_Unique_Proteins_rep_seq.faa.gz : Representative sequences for unique CDS sequences (amino acid, faa)
+- HRGMv2_Unique_Proteins.cluster_info.updated.tsv.gz : Cluster info for Unique proteins
+- HRGMv2_Unique_Proteins.taxonomic_map.tsv.gz : Taxonomy info for Unique proteins
+
+2.HRGMv2_{identity}_Proteins/ : Clustered protein catalogs at 100%, 95%, 90%, 70%, and 50% identity thresholds
+- HRGMv2_{identity}_Proteins_rep_seq.faa.gz : Representative sequences {identity}% protein families (amino acid, faa)
+- HRGMv2_{identity}_Proteins_cluster.tsv.gz : Cluster info for {identity}% protein families (representative sequences - member)
+- HRGMv2_{identity}_Proteins.cluster_info.updated.tsv.gz : Cluster info for {identity}% protein families
+- HRGMv2_{identity}_Proteins.taxonomic_map.tsv.gz : Taxonomy info for {identity}% protein families
+- emapper_results : eggNOG-mapper results for {identity}% proteins families
+- deepgoplus_results : deepgoplus results for 90% protein families (after filtering)
 ### Zenodo DOI
-<>
+This dataset has been split. 
+- Part 1: <https://doi.org/10.5281/zenodo.19534052>
+- Part 2: <https://doi.org/10.5281/zenodo.19534058>
+
+To reconstruct, ```cat HRGMv2_Proteins.part_* > HRGM2_Proteins.tar.gz```
+
+---
+## CAZymes
+### Description
+- Output of run_dbcan v4.1.4 (standalone version of dbCAN3). CAZyme families were annotated from 155,211 non-redundant genomes.
+### Zenodo DOI
+This dataset has been split. 
+- Part 1: <https://doi.org/10.5281/zenodo.19547966>
+- Part 2: <https://doi.org/10.5281/zenodo.19547970>
+- Part 3: <https://doi.org/10.5281/zenodo.19547972>
+- Part 4: <https://doi.org/10.5281/zenodo.19547975>
+
+To reconstruct, ```cat 2.HRGMv2_CAZymes.part_* > HRGM2_CAZymes.tar.gz```
+
+---
+## Defense systems
+### Description
+- Output of DefenseFinder for genome-resolved detection of bacterial defense systems.
+### Zenodo DOI
+<https://doi.org/10.5281/zenodo.19550803>
